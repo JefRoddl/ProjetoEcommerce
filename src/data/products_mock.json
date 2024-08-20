@@ -3,36 +3,36 @@
       "id": 1,
       "name": "Rel\u00f3gio Elegante",
       "price": 50.99,
-      "image": "https://source.unsplash.com/featured/?watch"
+      "image": "https://img.freepik.com/fotos-gratis/relogio-de-parede-dentro-de-casa-ainda-vida_23-2150417199.jpg?w=1380&t=st=1724111254~exp=1724111854~hmac=92405e1401cd0fca690762d988f682f0ecad4e384cd9cfb125c664023d2506dd"
     },
     {
       "id": 2,
       "name": "C\u00e2mera Vintage",
       "price": 85.5,
-      "image": "https://source.unsplash.com/featured/?camera"
+      "image": "https://img.freepik.com/fotos-gratis/composicao-de-camera-fotografica-vintage_23-2148913937.jpg"
     },
     {
       "id": 3,
       "name": "Fones de Ouvido",
       "price": 35.99,
-      "image": "https://source.unsplash.com/featured/?headphones"
+      "image": "https://m.media-amazon.com/images/I/510CZ4u-0mL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": 4,
       "name": "T\u00eanis de Corrida",
       "price": 120.0,
-      "image": "https://source.unsplash.com/featured/?sneakers"
+      "image": "https://cdn.sistemawbuy.com.br/arquivos/8396f6cdc4ecfdde50f447ad12127860/produtos/KAE6BAE4/9bf054d449resultado-6156145e407d1.jpg"
     },
     {
       "id": 5,
       "name": "Smartphone",
       "price": 299.99,
-      "image": "https://source.unsplash.com/featured/?smartphone"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3wbXwJGpij-gP5UZO8j4CvvupwRwFMJkf-g&s"
     },
     {
       "id": 6,
       "name": "Livro de Aventura",
       "price": 19.99,
-      "image": "https://source.unsplash.com/featured/?book"
+      "image": "https://i0.wp.com/geekpopnews.com.br/wp-content/uploads/2024/02/livros-game-of-thrones.jpg?resize=1200%2C640&ssl=1"
     }
   ]
