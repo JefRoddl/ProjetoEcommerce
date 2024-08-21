@@ -1,10 +1,50 @@
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
+import { useState } from 'react'
+
 import Catalog from './components/Catalog'
 import Cart from './components/Cart'
 import ThankYouPage from './components/ThankYouPage'
 
+import {ToastContainer, toast} from 'react-toastify';
+
+import "react-toastify/dist/ReactToastify.css"
+
 function App() {
+
+  const[cartItems, setCartItems] = useState([])
+
+  const handleaddCart = (product, quantity) => {
+
+    setCartItems((prevItems) => {
+
+      // se nao existir => adiciono o item
+      // se existir => incremento a quantidade
+
+      const itemExists = prevItems.find((item) => item.id === product.id);
+
+      if(itemExists) {
+        toast.info(`Quantidade do item${product.name} atualizada`)
+        return prevItems.map((item) => item.id === product.id ? {...item, quantity: item.quantity + quantity} : item)
+
+
+      } else {
+        toast.success(`${product.name} adicionado com sucesso`)
+        return [...prevItems, {...product, quantity}]
+      }
+    })
+
+  }
+
+  const handleUpdateCart = (product, quantity) => {
+
+    toast.info(`Quantidade do item${product.name} atualizada`)
+    setCartItems((prevItems) => {
+      return prevItems.map((item) => item.id === product.id ? {...item, quantity: +quantity} : item)
+    })
+
+
+  }
 
   return <BrowserRouter>
     <nav>
@@ -13,11 +53,19 @@ function App() {
     </nav>
     <div className='container'>
       <Routes>
-        <Route path="/" element={<Catalog />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/" element={<Catalog onAddToCart={handleaddCart}/>} />
+        <Route path="/cart" element={<Cart cartItems={cartItems} onUpdateCart={handleUpdateCart}/>} />
         <Route path="/thank-you" element={<ThankYouPage />} />
       </Routes>
     </div>
+    <ToastContainer 
+      position='top-center'
+      autoClose={3000}
+      hideProgressBar={false}
+      closeOnClick
+      pauseOnFocusLoss
+      pauseOnHover
+    />
   </BrowserRouter>
   
 }
