@@ -62,7 +62,8 @@ function App() {
     <div className='container'>
       <Routes>
         <Route path="/" element={<Catalog onAddToCart={handleaddCart}/>} />
-        <Route path="/cart" element={<Cart cartItems={cartItems} onUpdateCart={handleUpdateCart} onRemoveFromCart={handleRemoveFromCart}/>} />
+        <Route path="/cart" element={<Cart cartItems={cartItems} onUpdateCart={handleUpdateCart} onRemoveFromCart={handleRemoveFromCart}  setCartItem={setCartItems} onCheckout={() => {
+        }}/>} />
         <Route path="/thank-you" element={<ThankYouPage />} />
       </Routes>
     </div>
